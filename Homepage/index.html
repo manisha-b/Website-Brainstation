@@ -10,7 +10,8 @@
 <link href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900" rel="stylesheet" type="text/css">
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
 <script type="text/javascript" src="js/scrollview.js"></script>
-<!--Smooth scroll to anchor -->
+
+<!--Smooth scroll to navbar, id associeated is toTop -->
 <script>
 	
 		// When the document is loaded...
@@ -38,13 +39,46 @@
 			
 		});
     </script>
-   
+    
+<!--Smooth scroll to about us section, id associated is about -->
+<script>
+	
+		// When the document is loaded...
+	    $(document).ready(function()
+		{	
+
+			// Hide the toTop button when the page loads.
+			$("#about").css("display", "none");
+			$("#about").fadeIn("slow");
+
+
+			// When the user clicks the toTop button, we want the page to scroll to the top.
+			$("#about").click(function(){
+
+				// Disable the default behaviour when a user clicks an empty anchor link.
+				// (The page jumps to the top instead of // animating)
+				event.preventDefault();
+
+				// Animate the scrolling motion.
+				$("html, body").animate({
+					scrollTop:612
+				},"slow");
+
+			});
+			
+		});
+    </script>
+    
+<!--nice scrolling -->
+
+
+<!-- Useless
 <script>
 $("#test.png").hover(
     function(){$(this).animate({width: 400px, height:400px}, 1000);},        
     function(){$(this).animate({width: 200px, height:200px}, 1000);}
 );
-</script>
+</script> -->
 
 </head>
 
@@ -60,8 +94,8 @@ $("#test.png").hover(
 	<!-- Collect the nav links, forms, and other content for toggling -->
 	<div class="collapse navbar-collapse" id="topFixedNavbar1">
 	  <ul class="nav navbar-nav">
-			<li id="current"><a href="#">Link<span class="sr-only">(current)</span></a></li>
-			<li><a href="#">Link</a></li>
+			<li id="current"><a href="#about" id="about">About Us</a></li>
+			<li><a href="#">Link2</a></li>
 			<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown<span class="caret"></span></a>
         		<ul class="dropdown-menu" role="menu">
                 	<li><a href="#">Action</a></li>
@@ -76,7 +110,6 @@ $("#test.png").hover(
 			<li id="donate" name="donate">
             	<a href="#" style="color:#FFFFFF">Support</a>
             </li>                
-		  </li>
       </ul>
 	</div>
 </div>
@@ -105,7 +138,7 @@ $("#test.png").hover(
 		</div>
 		<div class="item"><img src="images/donations.jpg" alt="Third slide image" class="center-block carousel-img">
 			<div class="carousel-caption" id="title3">
-				<h3 style="font-weight:900">Join the fight against cancer</h3>
+				<h3 style="font-weight:900;font-size:3vw">Join the fight against cancer</h3>
 				<button type="button" class="btn btn-lg btn-default" id="volunteer">Find out how you can help</button>
 			</div>
 		</div>
@@ -129,6 +162,38 @@ $("#test.png").hover(
 <!--<div class="sidebar">
 <iframe src="http://commingly.com/testcalendargu/events/calendar/"  scrolling="no" frameborder="0" allowTransparency="true" width="700" height="500"></iframe>
 </div>-->
+
+<!--About section-->
+<!--Well-->
+
+<div class="container" style="width:100%;margin:0px;padding:0px">
+    <div class="well" style="margin-bottom:0px">
+        <a name="about" id="about-title">
+            <h2 style="text-align:center">Who are we?</h2>
+        </a>
+    </div>
+
+	<div id="resting-right">
+	</div>
+	<!--^the above div is IMPORTANT DO NOT DELETE,IT ALLOWS THE RIGHT DIV TO CONTROL THE LEFT DIV ON HOVER -->
+
+	<div id="about-left">
+    	<h1 id="about-heading-left">About us</h1>
+        <img src="images/cancer-society-logo.png" id="right-img"/> 
+        <p id="about-left-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." </p>
+	</div>
+
+	<div id="about-right">
+    	<h1 id="about-heading-right">Our Partner</h1>
+        <p id="about-right-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." </p>
+        
+	</div>
+</div>
+
+
+
+
+
 
 <!-- Link to top button -->
 <a id="toTop" href = "#">
