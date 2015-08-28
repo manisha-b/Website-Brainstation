@@ -1,19 +1,133 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en-US">
+
 <head>
-	<title>About Cancer</title>
-	<link rel="stylesheet" type="text/css" href="cancer-info.css">
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Cancer Research website">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Cancer Research website">
 	<meta name="keywords" content="cancer,research">
+  <title>About Cancer</title>
+  <link href="bootstrap.css" rel="stylesheet" type="text/css">
+  <link href="styles.css" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+  <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+  <style>
+    h1 {
+      font-size: 2.5em;
+    }
+
+    blockquote {
+      background: #f9f9f9;
+      border-left: 10px solid #ccc;
+      margin: 0;
+      padding: 0.5em 10px;
+      quotes: "\201C""\201D""\2018""\2019";
+    }
+    
+    blockquote:before {
+      color: #ccc;
+      content: open-quote;
+      font-size: 4em;
+      line-height: 0.1em;
+      margin-right: 0.25em;
+      vertical-align: -0.4em;
+    }
+    
+    blockquote p {
+      display: inline;
+    }
+    
+    body {
+    	overflow-x: hidden;
+    }
+
+    .row {
+      margin: 0;
+      display: inline-block;
+      padding: 1em;
+      max-width: 100%;
+      background-color: #00ccff;
+    }
+
+    .container-fluid {
+    	padding: 0;
+    	margin: 0;
+    }
+    
+    .quote, .infograph {
+      padding: 0;
+      margin: 0;
+    float:right;
+    }
+    
+    .infograph {
+     max-width: 100%;
+     max-height: 100%;
+     margin-right: 20px;
+    overflow: auto;
+    }
+  </style>
+
 </head>
-<body>
-	<h1>What is Cancer?</h1>
-	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin quis purus vitae dolor vestibulum faucibus. Pellentesque ut lorem ut tellus pretium ultrices. Vivamus porttitor, mauris eget lacinia accumsan, odio odio consequat odio, et elementum lacus orci ac justo. Morbi est nulla, aliquam vel velit tincidunt, pellentesque interdum magna. Integer fringilla porttitor diam at elementum. Cras congue dui ut scelerisque tincidunt. Vivamus semper imperdiet feugiat. Sed pretium placerat dapibus. Maecenas luctus, mauris nec placerat tempus, enim nisi sagittis eros, molestie faucibus purus ex quis tortor. Donec luctus facilisis lacinia. Fusce sem massa, mattis ac sapien ac, posuere placerat libero. Praesent euismod neque lectus, vel porta turpis consectetur vitae. Ut gravida placerat felis, dignissim molestie nisi. Aliquam elementum eu lectus interdum finibus. Etiam eget mi finibus, tempor erat eget, tempus ligula.</p>
-  <p>Proin iaculis magna elit, laoreet accumsan lorem pharetra luctus. Suspendisse volutpat, orci quis tincidunt gravida, erat leo sollicitudin tortor, sit amet vehicula enim sapien eu neque. Nunc ex nibh, consequat a massa sed, pulvinar ultricies eros. Sed sollicitudin enim in aliquet aliquam. Mauris vel iaculis augue. Integer ultrices tempus enim, sed scelerisque augue sollicitudin non. Etiam ornare interdum odio, nec dignissim lectus scelerisque quis. Phasellus ultrices quam sit amet ullamcorper fermentum.</p>
-<h2>Important Terminology<h2>
-<h1>Statistics</h1>
-  <iframe width="788" height="1750" frameborder="0" scrolling="no" style="overflow-y:hidden;" src="https://magic.piktochart.com/embed/7485565-untitled-infographic"></iframe>
-</body>
+
+
+<!-- Link to top button -->
+<a id="toTop" href="#">
+  <img src="images/ImgResponsive_Placeholder.png" class="img-circle img-responsive" id="up-btn" onmouseover="this.src='images/up-btn-active.png'" onmouseout="this.src='images/ImgResponsive_Placeholder.png'" />
+</a>
+
+<div class="container-fluid">
+  <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+    <div data-role="header">
+      <h1>CANCER 101</h1>
+    </div>
+    <div data-role="collapsibleset">
+      <div data-role="collapsible">
+        <h3>What is Cancer?</h3>
+        <p>Cancer is a genetic disease in which cells divide uncontrollably and become increasingly abnormal. The disease can be initiated from almost anywhere in the body.</p>
+        <p>Normal cells stop dividing and die after they become old or damaged, but cancer cells do not follow these orders and in turn, become invasive. Cancer cells can harm healthy cells and weaken the immune system.</p>
+        <p>As an increasing amount of cancer cells form, they can form lumps of tissue called tumours. Tumors can be benign or malignant. Benign tumours do not spread whereas malignant (cancerous) tumours do. The process of spreading into other tissues is
+          called metastasis.</p>
+        </p>
+      </div>
+      <div data-role="collapsible">
+        <h3>Causes</h3>
+        <p>Cancer is caused from mutations in DNA. These mutations can be a result of long-term exposure to carcinogens either from the environment (ex. air pollution, radiation, etc.) or poor lifestyle choices (ex.smoking, alcoholism, obesity ,etc.). It
+          can also be hereditary.</p>
+      </div>
+      <div data-role="collapsible">
+        <h3>Symptoms</h3>
+        <p>There are over 100 different types of cancer and every individual’s symptoms are unique. Size and location of the cancer, presence of metastasis are factors in the symptoms that will appear. However, some general symptoms include fever, pain,
+          fatigue, and an unintended drastic change. More significant symptoms include the presence of a lump, difficulty swallowing, difficulties with bowel or bladder function, persistent coughs, hoarseness, and unexplained bleeding or discharge.</p>
+      </div>
+    </div>
+
+
+    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+      <div class="row infograph">
+        <iframe width="400" height="900" frameborder="0" scrolling="yes" style="overflow-y:hidden;" src="https://magic.piktochart.com/embed/7485565-untitled-infographic"></iframe>
+      </div>
+    </div>
+
+
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+      <div class="row quote">
+        <blockquote>
+          <p>Hello</p>
+        </blockquote>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="js/jquery-1.11.2.min.js" type="text/javascript"></script>
+  <script src="js/bootstrap.js" type="text/javascript"></script>
+
+
+  </body>
+
 </html>
