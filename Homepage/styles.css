@@ -21,7 +21,7 @@ img#up-btn {
 	position:fixed;
 	right:25px;	
 	bottom:25px;
-	z-index:3;
+	z-index:2;
 }
 
 img#up-btn:hover {
@@ -45,7 +45,7 @@ a:hover {
 .navbar-default .navbar-nav > .open > a:hover,
 .navbar-default .navbar-nav > .open > a:focus {
   color: #555;
-  background-color: rgba(255,255,255,0) !important
+  background-color: rgba(255,255,255,0.5) !important
 }
 
 div.sidebar {
@@ -64,13 +64,12 @@ div.sidebar {
 
 li#current {
 	font-weight:400;
-	text-emphasis:;
 }
 
 #white-navbar {
 	background-color:rgba(255,255,255,0.9) !important;
 	height:50px !important;
-	z-index:3;
+	z-index:4;
 }
 
 li#donate {
@@ -87,12 +86,33 @@ li#donate {
 	font-weight:200 !important;
 }
 
-img#icon {
-	width:85px;
-	height:100%;
+#title-anim-1, #title-anim-2, #title-anim-3 {
+	font-weight:900;
 	position:absolute;
-	top:0px;
-	left:0px;
+	font-size:14px;
+}
+
+#title-anim-1 {
+	top:2px;
+	left:57px;
+}
+
+#title-anim-2 {
+	top:15px;
+	left:60px;
+}
+
+#title-anim-3 {
+	top:29px;
+	left:57px;
+}
+
+img#icon {
+	width:40px;
+	height:40px;
+	position:absolute;
+	top:5px;
+	left:15px;
 }
 
 /** carousel **/
@@ -110,24 +130,33 @@ img.carousel-img {
 
 #title1 {
 	position:absolute;
-	top:42%;
-	right:59%;
+	width:400px;
+	top:45%;
+	left:15%;
+}
+
+#title2 {
+	position:absolute;
+	top:15%;
+	left:35%;
+	width:400px;
+	color:#FFFFFF;
 }
 
 #title3 {
 	position:absolute;
 	top:20%;
 	color:#258BFD;
-
 }
 
 #volunteer {
 	font-size:1.2vw;
+	margin-top:18px !important;
 }
 
 #volunteer:hover {
 	background-color:#FDD706;
-	color:#FFFFFF
+	color:#FFFFFF;
 }
 
 /** animated boxes **/
@@ -169,10 +198,11 @@ a#about-title:hover {
 	text-decoration:none;
 }
 
+
 #about-left {
 	width:50%;
 	height:490px;
-	background:#404040;
+	background:#559BC3;
 	float:left;
 	color:#FFFFFF;
 	margin-right:-50%;
@@ -202,7 +232,7 @@ a#about-title:hover {
 }
 
 #about-right {
-	background:#B71427;
+	background:#FDB727;
 	float:right;
 	width:50%;
 	height:490px;
@@ -216,7 +246,7 @@ a#about-title:hover {
 #resting-right {
 	background:rgba(255,255,255,0);
 	width:50%;
-	height:500px;
+	height:490px;
 	position:relative;
 	float:right;
 	margin-left:-50%;
@@ -224,7 +254,8 @@ a#about-title:hover {
 }
 
 #about-left-text, #about-right-text {
-	color:#FFFFFF;
+	color:#545454;
+	font-weight:900;
 	font-size:24px;
 	margin:30px;
 	width:auto;
@@ -287,6 +318,51 @@ a#about-title:hover {
 #about-heading-left {
 	left:70%;
 }
+
+/** about cancer section **/
+#about-cancer {
+	width:100%;
+	margin:0px;
+	padding:0px;
+}
+
+#about-cancer-well {
+	color:#404040;
+}
+
+#about-cancer-well:hover {
+	color:#404040 !important;
+	font-weight:bolder;
+	text-decoration:none;
+}
+
+#cancer-main {
+	background:#D96C1C;
+	height:500px;
+	margin:0px;
+}
+
+#cancer-title {
+	margin:0px;
+	font-size:36px;
+	text-align: center;
+	position:relative;
+	top:45%;
+	color:#FFF;
+	-webkit-transition: 0.8s ease-in-out;
+	-moz-transition: 0.8s ease-in-out;
+	-o-transition: 0.8s ease-in-out;
+	transition: 0.8s ease-in-out;
+}
+
+#cancer-main:hover > #cancer-title {
+	font-size:30px;
+    -webkit-transform: translate(0,-5.8em);
+    -moz-transform: translate(0,-5.8em);
+    -o-transform: translate(0,-5.8em);
+    -ms-transform: translate(0,-5.8em);
+    transform: translate(0,-5.8em);
+  }
 
 /** clearfix **/
 .clearfix:after { content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0; }
