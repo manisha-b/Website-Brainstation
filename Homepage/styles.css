@@ -32,13 +32,16 @@ img#up-btn:hover {
 /*NAVBAR*/
 
 li {
-	font-size:1.7vw !important;
+	font-size:1.5em !important;
 	
 }
-
-a:hover {
+.nav a {
+	color:#3F3F3F;
+	font-weight:200;
+}
+.nav a:hover {
 	color:#258BFD !important;
-	font-weight:200 !important;
+	font-weight:400 !important;
 }
 
 .navbar-default .navbar-nav > .open > a,
@@ -74,6 +77,7 @@ li#current {
 
 li#donate {
 	background:#FDD706;
+	height:50px
 }
 
 #donate:hover {
@@ -81,128 +85,74 @@ li#donate {
 	color:#000000 !important;	
 }
 
-.dropdown-menu > li > a {
-	font-family:"Roboto", sans-serif !important;
-	font-weight:200 !important;
-}
-
-#title-anim-1, #title-anim-2, #title-anim-3 {
-	font-weight:900;
-	position:absolute;
-	font-size:14px;
-}
-
-#title-anim-1 {
-	top:2px;
-	left:57px;
-}
-
-#title-anim-2 {
-	top:15px;
-	left:60px;
-}
-
-#title-anim-3 {
-	top:29px;
-	left:57px;
-}
-
 img#icon {
-	width:40px;
-	height:40px;
+	width:250px;
+	height:auto;
 	position:absolute;
-	top:5px;
+	top:3px;
 	left:15px;
 }
 
+img#icon:hover {
+
+}
 /** carousel **/
 
 img.carousel-img {
 	width:100% !important;
-	height:110% !important;
+	height:70% !important;
 	position:relative;
 }
-
 
 .carousel-control.right, .carousel-control.left { 
 	filter:none !important;
 }
 
-#title1 {
+.carousel-caption {
 	position:absolute;
-	width:400px;
 	top:45%;
-	left:15%;
-}
-
-#title2 {
-	position:absolute;
-	top:15%;
-	left:35%;
-	width:400px;
 	color:#FFFFFF;
+	text-align: center;
 }
 
-#title3 {
-	position:absolute;
-	top:20%;
-	color:#258BFD;
+.title h1 {
+	font-size: 1em;
 }
 
-#volunteer {
-	font-size:1.2vw;
-	margin-top:18px !important;
-}
-
-#volunteer:hover {
+.btn:hover {
+	
 	background-color:#FDD706;
 	color:#FFFFFF;
 }
 
 /** animated boxes **/
-.animBlock {
-  display: inline-block;
-  opacity: 0;
-  filter: alpha(opacity=0);
-  position: relative;
-  -webkit-transition: all .55s ease-in;
-  -moz-transition: all .55s ease-in;
-  -ms-transition: all .55s ease-in;
-  -o-transition: all .55s ease-in;
-  transition: all .55s ease-in;
-}
-.animBlock[data-position="left"] { left: -20%; }
-.animBlock[data-position="right"] { right: -20%; }
 
-.animBlock[data-position="left"].viewed {
-  left: 0%;
-  opacity: 1;
-  filter: alpha(opacity=100);
-}
-.animBlock[data-position="right"].viewed {
-  right: 0%;
-  opacity: 1;
-  filter: alpha(opacity=100);
-}
 
 
 
 
 /**about section**/
-a#about-title {
+a.about-title{
 	color:#404040;
 }
 
-a#about-title:hover {
+a.about-title:hover {
 	color:#404040 !important;
-	text-decoration:none;
+	text-decoration: none;
 }
-
 
 #about-left {
 	width:50%;
-	height:490px;
-	background:#559BC3;
+	height:600px;
+	background:
+		linear-gradient(
+		rgba(85,155,195, 0.2),
+		rgba(85,155,195, 0.2)
+		),
+		url(images/future.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	
 	float:left;
 	color:#FFFFFF;
 	margin-right:-50%;
@@ -213,16 +163,9 @@ a#about-title:hover {
     -ms-transition: width 0.6s; /* IE9 (maybe) */
 }
 
-#right-img {
-	height:100%;
-	float:right;
-	width:auto;
-	display:none;
-}
-
 #about-left:hover + #about-right {
 	width:30%;
-	background-image:url(images/small-blue-logo.png);
+	background-image:url(images/ccs people.jpg);
 	position:relative;
 	z-index:2;
 }
@@ -231,11 +174,44 @@ a#about-title:hover {
 	width:70%
 }
 
+#about-right:hover {
+	width:70%
+}
+
+#left-img {
+	height:100%;
+	float:right;
+	width:auto;
+	display:none;
+}
+
+#about-left-text, #about-right-text {
+	color:#FFFFFF;
+	background-color: rgba(32,32,32,0.8);
+	padding: 1em;
+	font-weight:500;
+	font-size:20px;
+	margin:30px;
+	width:auto;
+	display:none;
+	overflow: hidden;
+}
+
+#about-right:hover > #about-right-text {
+	display:block;
+}
+
+#about-left:hover > #about-left-text {
+	display:block;
+}
+
 #about-right {
-	background:#FDB727;
+	background-image: url("images/ccs people.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
 	float:right;
 	width:50%;
-	height:490px;
+	height:600px;
 	transition: width 0.6s;
     -moz-transition: width 0.6s; /* Firefox 4 */
     -webkit-transition: width 0.6s; /* Safari and Chrome */
@@ -253,26 +229,25 @@ a#about-title:hover {
 	z-index:1; 
 }
 
-#about-left-text, #about-right-text {
-	color:#545454;
-	font-weight:900;
-	font-size:24px;
-	margin:30px;
-	width:auto;
-	display:none;
-}
-
-#about-left:hover > #about-left-text {
-	text-align:right;
-	display:block;
+.filter-yellow {
+	-webkit-filter: opacity(.2);
+  filter: opacity(.2);
 }
 
 #resting-right:hover ~ #about-right > #about-right-text {
 	display:block;
 }
 
-#resting-right:hover {
-	
+#resting-left:hover~ #about-right {
+	width:30%;
+}
+
+#resting-right:hover ~ #about-left{
+	width:30%;
+}
+
+#resting-left:hover ~ #about-right > #left-img {
+	position: relative;
 }
 
 #resting-right:hover ~ #about-right > #about-heading-right {
@@ -281,6 +256,10 @@ a#about-title:hover {
 
 #about-left:hover > #about-heading-left {
 	display:none;
+}
+
+#about-title:hover {
+	text-decoration: none;
 }
 
 #about-left:hover ~ #about-right > #about-heading-right {
@@ -301,68 +280,118 @@ a#about-title:hover {
 }
 
 #resting-right:hover ~ #about-left > #right-img {
-	display:block;
+	position: relative;
 }
 
 #about-heading-left, #about-heading-right {
 	color:#FFFFFF;
-	position:relative;
-	top:40%;
-	width:250px;
-}
-
-#about-heading-right {
-	left:7%;
-}
-
-#about-heading-left {
-	left:70%;
+	text-align: center;
+	padding-top: 4em;
 }
 
 /** about cancer section **/
-#about-cancer {
-	width:100%;
-	margin:0px;
-	padding:0px;
-}
-
-#about-cancer-well {
-	color:#404040;
-}
-
-#about-cancer-well:hover {
-	color:#404040 !important;
-	font-weight:bolder;
-	text-decoration:none;
-}
 
 #cancer-main {
-	background:#D96C1C;
-	height:500px;
-	margin:0px;
+	margin-top:1.5em;
+	padding: 3em;
 }
 
-#cancer-title {
-	margin:0px;
-	font-size:36px;
+#cancer{
+	color: #3F3F3F;
+	
+}
+
+a{
+	color:#3F3F3F;
+	font-weight:200;
+}
+
+a:hover{
+	text-decoration: none;
+	color: #FFFFFF;
+}
+
+  /*research*/
+#research{
+	background: #f9f9f9;
+	position: relative;
+	margin-top: 2em;
+	padding: 1em;
+}
+
+#img-circle {
+	width: 50%;
+	height: 50%;
+}
+/*why donate*/
+#why-donate {
 	text-align: center;
-	position:relative;
-	top:45%;
-	color:#FFF;
-	-webkit-transition: 0.8s ease-in-out;
-	-moz-transition: 0.8s ease-in-out;
-	-o-transition: 0.8s ease-in-out;
-	transition: 0.8s ease-in-out;
+}	
+
+
+blockquote {
+  background: #f9f9f9;
+  display: inline-block;
+  border-left: 10px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
 }
 
-#cancer-main:hover > #cancer-title {
-	font-size:30px;
-    -webkit-transform: translate(0,-5.8em);
-    -moz-transform: translate(0,-5.8em);
-    -o-transform: translate(0,-5.8em);
-    -ms-transform: translate(0,-5.8em);
-    transform: translate(0,-5.8em);
-  }
+blockquote:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+blockquote p {
+  display: inline;
+}
+
+/*Manisha*/
+
+
+table {
+	border-collapse: collapse;
+	padding: 30px;
+}
+
+table, td {
+	border: 1px solid black;
+	background-color: #AAB2B5;
+}
+
+#container {
+	max-height: 100%;
+	max-width: 100%;
+	padding-bottom: 100px;
+}
+
+ul, li {
+	list-style-type: none;
+	font-weight: bold;
+	font-color: #024E60;
+	line-height: 150%;
+}
+
+img {
+	height: 50%;
+	width: 50%;
+	position: relative;
+	float: right;
+}
+
+
+footer {
+	background-color: #Fff000;
+	padding: 20px;
+}
+
+.box {
+	max-width: 375px;
+}
 
 /** clearfix **/
 .clearfix:after { content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0; }
